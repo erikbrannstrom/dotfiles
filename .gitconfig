@@ -1,0 +1,25 @@
+[user]
+    name = Erik Brännström
+    email = erik.brannstrom@timeedit.se
+
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    fuckit = checkout -- .
+    today = shortlog --since=midnight
+    weeklog = shortlog --since=7.days
+    uncommit = reset --soft HEAD^
+    sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+    sapply = "!f() { git stash apply stash^{/$*}; }; f"
+
+[push]
+    default = simple
+
+[color]
+    ui = auto
+
+[core]
+    editor = atom --wait
